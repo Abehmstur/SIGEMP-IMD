@@ -3,7 +3,7 @@
 
 using namespace std;
 
-// Getters
+    // Getters
     string Endereco::getRua() const {
         return rua;
     }
@@ -25,22 +25,22 @@ using namespace std;
     }
 
     // Setters
-    void Endereco::setRua(const std::string& newRua) {
-        rua = newRua;
+    void Endereco::setRua(const std::string& novaRua) {
+        rua = novaRua;
     }
 
-    void Endereco::setNumero(int newNumero) {
-        numero = newNumero;
+    void Endereco::setNumero(int novaNumero) {
+        numero = novaNumero;
     }
 
-    void Endereco::setBairro(const std::string& newBairro) {
-        bairro = newBairro;
+    void Endereco::setBairro(const std::string& novaBairro) {
+        bairro = novaBairro;
     }
 
-    void Endereco::setCidade(const std::string& newCidade) {
-        cidade = newCidade;
+    void Endereco::setCidade(const std::string& novaCidade) {
+        cidade = novaCidade;
     }
 
-    void Endereco::setCEP(const std::string& newCEP) {
-        cep = newCEP;
+    void Endereco::setCEP(const std::string& novaCEP) {
+        cep = novaCEP;
     }
