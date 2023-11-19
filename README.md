@@ -4,7 +4,7 @@
 - Pessoa destinada a salvar dos dados pessoais.
 - Funcionario destianada a salvar os dados pessoas e empregatícios.
 - Professor destianada a salvar os dados do cargo professor e seus subníveis.
-- Professor destianada a salvar os dados do cargo tecnico Adm e suas características.
+- Tecnico Adm destianada a salvar os dados do cargo tecnico Adm e suas características.
 - Main é a classe principal de execução das funções do projeto.
 
 ## Arquivo adicional
