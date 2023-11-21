@@ -23,7 +23,7 @@ void mostrarMenu() {
     cout << "8. Buscar Tecnico ADM" << endl;
     cout << "9. Sair" << endl;
     cout << "====================================" << endl;
-    cout << "Escolha uma opcao: ";
+    cout << "Escolha uma opcao: \n\n";
 }
 
 int main()
@@ -73,13 +73,10 @@ int main()
                 buscarTecnicoADM(matriculaParaBuscarTecnico);
                 break;
             case 9:
-                cout << "Saindo do programa..." << endl;
+                cout << "Saindo do programa...\n\n" << endl;
                 break; 
             default:
                 cout << "Opcao invalida! Por favor, escolha uma opcao valida." << endl;
-                if(escolha == 9){
-                    cout << "Voce saiu, fim do programa..." << endl;
-                }
                 break;
         }
     } while (escolha != 9);

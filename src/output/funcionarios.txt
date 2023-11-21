@@ -129,3 +129,56 @@ Data de Ingresso: 09/09/2009
 Adicional de Produtividade: 0.25
 Funcao Desempenhada: Novador
 
+Tipo: Tecnico
+Matricula: 2299
+Nome: Segundo Tecnico Teste
+CPF: 97845612
+Data de Nascimento: 25/12/1999
+Endereco:
+Rua: Novenda
+Numero: 29
+Bairro: De Deus
+Cidade: Natal
+CEP: 59999123
+Salario: 2800
+Departamento: Tecnologia da Info
+Carga Horaria: 45
+Data de Ingresso: 19/09/2008
+Adicional de Produtividade: 0.25
+Funcao Desempenhada: Formatador de PC
+
+Tipo: Tecnico
+Matricula: 2300
+Nome: Bruce TCcnico Banner
+CPF: 76543219
+Data de Nascimento: 08/08/1985
+Endereco:
+Rua: Verdejante
+Numero: 10
+Bairro: Gamma
+Cidade: Nova York
+CEP: 10001
+Salario: 3200
+Departamento: Engenharia de Software
+Carga Horaria: 40
+Data de Ingresso: 15/04/2010
+Adicional de Produtividade: 0.25
+Funcao Desempenhada: Analista de Segurança
+
+Tipo: Tecnico
+Matricula: 2301
+Nome: Natasha Tecnica Romanoff
+CPF: 54321678
+Data de Nascimento: 25/11/1990
+Endereco:
+Rua: Espionagem
+Numero: 7
+Bairro: Stealth
+Cidade: Moscou
+CEP: 123456
+Salario: 3000
+Departamento: Segurança da Informação
+Carga Horaria: 42
+Data de Ingresso: 10/10/2012
+Adicional de Produtividade: 0.28
+Funcao Desempenhada: Analista de Vulnerabilidades

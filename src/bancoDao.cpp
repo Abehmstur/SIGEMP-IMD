@@ -404,8 +404,87 @@ void cadastrarTecnicoADM(std::vector<TecnicoADM>& tecnicosADM){
         operacaoSucesso();
 
 };
-void listarTecnicosADM(){};
-void deletarTecnicoADM(int matricula){};
+
+//listar Tecnicos ADM
+void listarTecnicosADM(){
+    fstream arquivo("funcionarios.txt");
+    vector<TecnicoADM> listaTecnicos;
+
+    //validacao caso o arquivo não abra.
+    if (!arquivo.is_open()) {
+        cerr << "Nao foi possivel abrir o arquivo." << endl;
+    } else {
+
+        string linha;
+        TecnicoADM novoTecnico;
+
+
+        while(getline(arquivo, linha)){
+            if (linha.find("Tipo: Tecnico") != string::npos) {
+                novoTecnico = TecnicoADM(); 
+            } else if (linha.find("Nome: ") == 0) {
+                novoTecnico.setNome(linha.substr(6));
+            } else if (linha.find("Funcao Desempenhada: ") == 0) {
+                novoTecnico.setFuncaoDesempenhada(linha.substr(21));
+                listaTecnicos.push_back(novoTecnico); 
+            }
+        }
+        arquivo.close();
+
+        cout << "TECNICOS: \n";
+
+        //lista tecnico adm no for
+        for (const auto& tecnicos : listaTecnicos) {
+            cout << "Nome: " << tecnicos.getNome() << " | Funcao Desempenhada: " << tecnicos.getFuncaoDesempenhada() << endl;
+        }
+    }
+};
+
+//replica do deletar professor
+void deletarTecnicoADM(int matricula){
+    ifstream arquivoOriginal("funcionarios.txt");
+    ofstream arquivoTemporario("temp.txt");
+
+    if (!arquivoOriginal.is_open() || !arquivoTemporario.is_open()) {
+        cerr << "Nao foi possivel abrir o arquivo." << endl;
+        return;
+    }
+
+    string linha;
+    bool tecnicoEncontrado = false;
+    bool bloqueio = false; // Variável para controlar se deve bloquear a escrita
+
+    while (getline(arquivoOriginal, linha)) {
+        // Verifica se encontrou a matrícula do professor
+        if (linha.find("Matricula: " + to_string(matricula)) != string::npos) {
+            tecnicoEncontrado = true;
+            bloqueio = true; // Bloqueia a escrita a partir deste ponto
+        }
+
+        // Se encontrou, pula todas as linhas referentes ao tecnico
+        if (bloqueio && linha.empty()) {
+            bloqueio = false; // Desbloqueia a escrita
+        }
+
+        // Escreve no arquivo temporário se não for uma linha do tecnico a ser deletado
+        if (!bloqueio) {
+            arquivoTemporario << linha << endl;
+        }
+    }
+
+    arquivoOriginal.close();
+    arquivoTemporario.close();
+
+    // Remove o arquivo original e renomeia o temporário para o nome do original
+    remove("funcionarios.txt");
+    rename("temp.txt", "funcionarios.txt");
+
+    if (tecnicoEncontrado) {
+        cout << "Tecnico com matricula " << matricula << " foi deletado com sucesso." << endl;
+    } else {
+        cout << "Tecnico com matricula " << matricula << " nao encontrado." << endl;
+    }
+};
 
 //busca tec
 void buscarTecnicoADM(int matricula){
