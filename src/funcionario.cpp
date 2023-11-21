@@ -4,10 +4,6 @@
 //Construtor 
 Funcionario::Funcionario(){
 }
-//Construtor parametrizado
-Funcionario::Funcionario(const std::string& _matricula, float _salario, const std::string& _departamento, int _cargaHoraria, const std::string& _dataIngresso)
-    : matricula(_matricula), salario(_salario), departamento(_departamento), cargaHoraria(_cargaHoraria), dataIngresso(_dataIngresso) {
-}
 
 //Getters
 std::string Funcionario::getMatricula() const {

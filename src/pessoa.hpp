@@ -4,7 +4,7 @@
 #include <string>
 #include "endereco.hpp"
 
-class Pessoa {
+class Pessoa : public Endereco{
     private:
         std::string nome;
         std::string cpf;

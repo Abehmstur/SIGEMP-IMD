@@ -4,34 +4,86 @@
 #include "./endereco.cpp"
 #include "./pessoa.cpp"
 #include "./bancoDao.cpp"
+#include "./professor.cpp"
+#include "./funcionario.cpp"
+#include "./tecnico_adm.cpp"
 
 using namespace std;
 
+//menuzinho
+void mostrarMenu() {
+    cout << "========== MENU PRINCIPAL ==========" << endl;
+    cout << "1. Cadastrar Professor" << endl;
+    cout << "2. Listar Professores" << endl;
+    cout << "3. Deletar Professor" << endl;
+    cout << "4. Buscar Professor" << endl;
+    cout << "5. Cadastrar Tecnico ADM" << endl;
+    cout << "6. Listar Tecnicos ADM" << endl;
+    cout << "7. Deletar Tecnico ADM" << endl;
+    cout << "8. Buscar Tecnico ADM" << endl;
+    cout << "9. Sair" << endl;
+    cout << "====================================" << endl;
+    cout << "Escolha uma opcao: ";
+}
+
 int main()
 {
-   /*  Endereco novoEndereco;
-    Pessoa novaPessoa;
-    Pessoa pessoa1("Arthur", "123456789", "11/02/1961", novoEndereco);
+    int escolha;
 
-    cout << "====Novo Endereco====" << endl;
-    novoEndereco.setNumero(123);
-    cout << "Numero: " << novoEndereco.getNumero() << endl;
+    do {
+        mostrarMenu();
+        cin >> escolha;
+        cin.ignore(); // Limpa o buffer de entrada
 
-    novaPessoa.setNome("Joao Miguel");
-    novaPessoa.setEndereco(novoEndereco);
-    cout << "====Nova Pessoa====" << endl;
-    cout << "Nome: " << novaPessoa.getNome() << endl;
-    cout << "Endereco: " << novaPessoa.getEndereco().getNumero() << endl;
+        switch (escolha) {
+            case 1:
+                cadastrarProfessor(professores);
+                break;
+            case 2:
+                listarProfessores();
+                break;
+             case 3:
+                int matriculaParaDeletar;
+                cout << "Digite a matricula do professor para deletar: ";
+                cin >> matriculaParaDeletar;
+                deletarProfessor(matriculaParaDeletar);
+                break;
+            case 4:
+                int matriculaParaBuscar;
+                cout << "Digite a matricula do professor para buscar: ";
+                cin >> matriculaParaBuscar;
+                buscarProfessor(matriculaParaBuscar);
+                break;
+            case 5:
+                cadastrarTecnicoADM(tecnicosADM);
+                break;
+            case 6:
+                listarTecnicosADM();
+                break;
+            case 7:
+                int matriculaParaDeletarTecnico;
+                cout << "Digite a matricula do tecnico ADM para deletar: ";
+                cin >> matriculaParaDeletarTecnico;
+                deletarTecnicoADM(matriculaParaDeletarTecnico);
+                break;
+            case 8:
+                int matriculaParaBuscarTecnico;
+                cout << "Digite a matricula do tccnico ADM para buscar: ";
+                cin >> matriculaParaBuscarTecnico;
+                buscarTecnicoADM(matriculaParaBuscarTecnico);
+                break;
+            case 9:
+                cout << "Saindo do programa..." << endl;
+                break; 
+            default:
+                cout << "Opcao invalida! Por favor, escolha uma opcao valida." << endl;
+                if(escolha == 9){
+                    cout << "Voce saiu, fim do programa..." << endl;
+                }
+                break;
+        }
+    } while (escolha != 9);
 
-    cout << "====Nova Pessoa[1]====" << endl;
-    cout << "Nome_p1: " << pessoa1.getNome() << endl;
-    cout << "CPF_p1: " << pessoa1.getCPF() << endl;
-    cout << "Nascimento_p1: " << pessoa1.getDataNascimento() << endl;
-    cout << "Endereco_p1: " << pessoa1.getEndereco().getNumero(); */
-
-    //Testes DAO
-    
-    cadastrarProfessor(professores);
 
     return 0;
 }

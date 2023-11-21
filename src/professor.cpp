@@ -1,12 +1,9 @@
 #include "professor.hpp"
 #include "funcionario.hpp"
+#include "pessoa.hpp"
 
 Professor::Professor(){
-
-}
-//Construtor parametrizado
-Professor::Professor(Nivel _nivel, Formacao _formacao, const std::string& _disciplina)
-    : nivelProfessor(_nivel), formacaoProfessor(_formacao), disciplina(_disciplina) {
+    
 }
 
 //Getters

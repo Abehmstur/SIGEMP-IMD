@@ -25,5 +25,6 @@ class BancoDao : public Professor, TecnicoADM{
         void listarTecnicosADM();
         void deletarTecnicoADM(int matricula);
         void buscarTecnicoADM(int matricula);
+
 };
 #endif
