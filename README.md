@@ -10,3 +10,7 @@
 ## Arquivo adicional
 - exception.cpp destinada a guardar as mensagens de exceção em funções para serem chamadas.
 - menu.cpp destinada a estruturar o menu de opções do projeto que será rodado na main, com intuito de maior organização do código.
+
+## Compilação
+- Para compilar basta ir na main.cpp e clicar no botão de compilar no VSCODE.
+- Se precisar rebaixar o código, ele tá aberto no meu GITHUB: https://github.com/Abehmstur/SIGEMP-IMD
